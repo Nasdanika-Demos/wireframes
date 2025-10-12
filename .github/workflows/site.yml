@@ -24,14 +24,14 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Set up JDK 17
+      - name: Set up JDK 21
         uses: actions/setup-java@v4
         with:
-          java-version: '17'
+          java-version: '21'
           distribution: 'temurin'
       - name: Download Nasdanika CLI
 #        run: wget https://downloads.vlasov.us/nsd-cli.zip
-        run: wget https://github.com/Nasdanika/cli/releases/download/maven-2025.6.0/nsd-cli.zip
+        run: wget https://github.com/Nasdanika/cli/releases/download/maven-2025.21.0/nsd-cli.zip
       - name: Unzip Nasdanika CLI
         run: unzip nsd-cli.zip
       - name: Setup Graphviz
